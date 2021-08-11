@@ -1,0 +1,110 @@
+/* *{
+    box-sizing: border-box;
+} */
+
+body{
+    background-image: url(Background.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.location{
+    display: flex;
+    justify-content: space-between;
+    text-align: start;
+}
+.curr-loc{
+    padding:50px;
+    font-size: 40px;
+    color: #eee;
+}
+.india{
+    padding:10px;
+    font-size: 20px;
+    color: rgb(197, 199, 206);
+    margin-left:35px;
+}
+.time{
+    padding:60px 0px 10px 60px;
+    font-size: 70px;
+    color: #eee;
+}
+.am-pm{
+    font-size:30px;
+}
+.day-date{
+    padding:0px 0px 20px 60px;
+    color: #eee;
+    font-size: 30px;
+}
+.information{
+    width:200px;
+    background:rgb(0,0,0,0.4);
+    text-align: center;
+    justify-content: left;
+    padding: 10px;
+    margin-left: 50px;
+    margin-top:20px;
+    border:2px solid white;
+    border-radius: 4%;
+}
+.weather-items{
+    display: flex;
+    justify-content: space-between;
+    padding: 3px;
+    color: rgb(200, 217, 233);
+}
+.Weekly-forecast{
+    display:flex;
+    margin-top:50px;
+    margin-left:50px;
+}
+
+.today{
+    display: flex;
+    border:2px solid white;
+    margin:12px;
+    border-radius: 5%;
+    text-align: center;
+    padding:12px;
+    font-size:20px;
+    font-weight: 500;
+    color:rgb(197, 199, 206);
+    background:rgb(0,0,0,0.4);
+}
+.today img{
+    width:150px;
+    height:150px;
+}
+.next-weeks{
+    display:flex;
+    height:auto;
+}
+.next-weeks .week-items{
+    border:2px solid white;
+    margin:15px;
+    border-radius: 5%;
+    text-align: center;
+    padding:10px;
+    font-size: 18px;
+    font-weight: 500;
+    height:200px;
+    color:rgb(197, 199, 206);
+    background:rgb(0,0,0,0.4);
+}
+
+.temp{
+    padding:5px;
+}
+.monday-img{
+    padding:5px;
+}
+.others{
+    padding:20px;
+}
+.others div{
+    padding:9px;
+}
+.others .day{
+   font-size: 25px;
+}
