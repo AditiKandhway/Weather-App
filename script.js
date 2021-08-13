@@ -12,7 +12,7 @@ setInterval(() => {
     const Hoursin12=hour>=13? hour%12 :hour
     const minutes=time.getMinutes();
     const ampm=hour>=12?'PM':'AM';
-    timeE.innerHTML =(Hoursin12+':'+minutes+' '+`<span class="am-pm">${ampm}</span>`)
+    timeE.innerHTML =((Hoursin12<10?'0'+Hoursin12:Hoursin12)+':'+(minutes<10?'0'+minutes:minutes)+' '+`<span class="am-pm">${ampm}</span>`)
     dateE.innerHTML =(days[day]+', '+date+' '+months[month]);
 },1000);
 // function to call the api based on geo location.
@@ -22,8 +22,7 @@ function getWeatherData()
     navigator.geolocation.getCurrentPosition((success) => {
         console.log(success);
         let {lat,log}=success.coords;
-        const proxy='https://cors-anywhere.herokuapp.com/';
-        fetch(`${proxy}https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${log}&exclude=hourly,minutely&appid=${APIKey}`).then(res=>res.json()).then(data=>{
+        fetch(`https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${log}&exclude=hourly,minutely&appid=${APIKey}`).then(res=>res.json()).then(data=>{
             console.log(data);
         })
     })
